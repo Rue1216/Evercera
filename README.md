@@ -20,9 +20,16 @@ pnpm exec husky add .husky/pre-commit "pnpm exec lint-staged"
 - Prettier: file formatting
 
 ```=cmd
-# prettier
+# add prettier
 pnpm add -D prettier prettier-plugin-astro
 
 # manually run script to format in cmd
 pnpm run prettier # original: pnpm prettier --write . --plugin=prettier-plugin-astro
+
+# vscode format on save
+# add scripts below in your local settings.json
+"prettier.documentSelectors": ["**/*.astro"],
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 ```
