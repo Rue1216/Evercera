@@ -22,6 +22,7 @@ pnpm exec husky add .husky/pre-commit "pnpm exec lint-staged"
 ```=cmd
 # prettier
 pnpm add -D prettier prettier-plugin-astro
-# manually run script below to format
-pnpm prettier --write . --plugin=prettier-plugin-astro
+
+# manually run script to format in cmd
+pnpm run prettier # original: pnpm prettier --write . --plugin=prettier-plugin-astro
 ```
