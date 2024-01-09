@@ -1,14 +1,30 @@
 # 🪨 Evercera
 
-tech stack:
+Tech stack:
 
 - Astro
-- maybe Vue component(?)
 - eslint & prettier
+- ui framework
+
+## Init project
+
+- use `pnpm`
+- node version: 18.16.1
+
+```=cmd
+# install all dependencies
+pnpm install
+
+# start project
+pnpm run dev
+
+# manually lint files (using prettier & eslint)
+pnpm run lint
+```
 
 ## Env setup records
 
-- Git hook: checking for commit
+1.  Git hook: checking for commit
 
 ```=cmd
 pnpm add --save-dev husky lint-staged # install packages
@@ -17,14 +33,14 @@ npm pkg set scripts.prepare="husky install" # add script in package.json
 pnpm exec husky add .husky/pre-commit "pnpm exec lint-staged"
 ```
 
-- Prettier: file formatting
+2. Prettier: file formatting
 
 ```=cmd
 # add prettier
 pnpm add -D prettier prettier-plugin-astro
 
 # manually run script to format in cmd
-pnpm run prettier # original: pnpm prettier --write . --plugin=prettier-plugin-astro
+pnpm prettier --write . --plugin=prettier-plugin-astro
 
 # vscode format on save
 # add scripts below in your local settings.json
@@ -32,4 +48,11 @@ pnpm run prettier # original: pnpm prettier --write . --plugin=prettier-plugin-a
   "[astro]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+```
+
+3. eslint
+
+```=cmd
+# install eslint: core/typescript/a11y
+pnpm add -D eslint eslint-plugin-astro @typescript-eslint/parser eslint-plugin-jsx-a11y prettier-plugin-astro
 ```
