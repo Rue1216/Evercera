@@ -16,7 +16,7 @@ import { Logo } from './global/Logo'
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
   return (
-    <Navbar shouldHideOnScroll isBordered isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
+    <Navbar isBordered isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent justify="start">
         <Link href="/">
           <Logo className="w-4 h-4" />
@@ -29,7 +29,7 @@ export default function App() {
       <NavbarContent className="hidden sm:flex" justify="end">
         {menuItems.map((item, index) => (
           <NavbarItem key={index}>
-            <Link className="ml-3" href={item.path}>
+            <Link underline="hover" className="ml-3" href={item.path}>
               {item.title['zh-tw']}
             </Link>
           </NavbarItem>
@@ -38,7 +38,7 @@ export default function App() {
       <NavbarMenu>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
-            <Link className="w-full py-3" href={item.path} size="lg">
+            <Link underline="hover" className="w-full py-3" href={item.path} size="lg">
               {item.title['zh-tw']}
             </Link>
           </NavbarMenuItem>
