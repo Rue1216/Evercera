@@ -59,26 +59,25 @@ export default {
               large:
                 '0px 0px 30px 0px rgb(0 0 0 / 0.04), 0px 30px 60px 0px rgb(0 0 0 / 0.12), 0px 0px 1px 0px rgb(0 0 0 / 0.3)'
             }
-          }, // light theme layout tokens
+          },
           colors: {
-            background: '#fdeeee',
-            foreground: '#150a03',
+            background: '#fbefed', // or DEFAULT
+            foreground: '#140906', // or 50 to 900 DEFAULT
             primary: {
-              50: '#fdeeee',
-              100: '#e1d5d2',
-              200: '#c8bab7',
-              300: '#b19e9b',
-              400: '#9a847f',
-              500: '#806a64',
-              600: '#64524e',
-              700: '#483a37',
-              800: '#2d2220',
-              900: '#150a03',
-              DEFAULT: '#806a64',
-              foreground: '#150a03'
-            },
-            focus: '#9a847f'
-          } // light theme colors
+              50: '#140906',
+              100: '#2e221e',
+              200: '#4b3a34',
+              300: '#695149',
+              400: '#86685e',
+              500: '#a08178',
+              600: '#b49e96',
+              700: '#c9bab4',
+              800: '#e1d5d1',
+              900: '#fbefed',
+              foreground: '#fbefed',
+              DEFAULT: '#86685e'
+            }
+          }
         },
         dark: {
           layout: {
@@ -96,23 +95,22 @@ export default {
             }
           },
           colors: {
-            background: '#150a03',
-            foreground: '#fdeeee',
+            background: '#140906', // or DEFAULT
+            foreground: '#fbefed', // or 50 to 900 DEFAULT
             primary: {
-              50: '#fdeeee',
-              100: '#e1d5d2',
-              200: '#c8bab7',
-              300: '#b19e9b',
-              400: '#9a847f',
-              500: '#806a64',
-              600: '#64524e',
-              700: '#483a37',
-              800: '#2d2220',
-              900: '#150a03',
-              DEFAULT: '#64524e',
-              foreground: '#fdeeee'
-            },
-            focus: '#9a847f'
+              900: '#140906',
+              800: '#2e221e',
+              700: '#4b3a34',
+              600: '#695149',
+              500: '#86685e',
+              400: '#a08178',
+              300: '#b49e96',
+              200: '#c9bab4',
+              100: '#e1d5d1',
+              50: '#fbefed',
+              foreground: '#fbefed',
+              DEFAULT: '#b49e96'
+            }
           }
         }
       }

@@ -4,5 +4,8 @@ import tailwind from '@astrojs/tailwind'
 
 // https://astro.build/config
 export default defineConfig({
+  prefetch: {
+    defaultStrategy: 'hover'
+  },
   integrations: [react(), tailwind()]
 })

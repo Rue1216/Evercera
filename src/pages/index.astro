@@ -1,13 +1,46 @@
 ---
-import Layout from '../layouts/Layout.astro'
+import Layout from '@layouts/Layout.astro'
 import { Button } from '@nextui-org/react'
+
+// const cases = [
+//   { title: '馬祖酒廠', src: '@assets/image/products/case1.jpg' },
+//   { title: '馬祖酒廠', src: '@assets/image/products/case2.jpg' },
+//   { title: '馬祖酒廠', src: '@assets/image/products/case3.jpg' },
+//   { title: '馬祖酒廠', src: '@assets/image/products/case4.jpg' },
+//   { title: '馬祖酒廠', src: '@assets/image/products/case5.png' },
+//   { title: '馬祖酒廠', src: '@assets/image/products/case6.png' }
+// ]
 ---
 
 <Layout title="">
   <main>
-    <section class="w-full h-screen bg-primary-600"></section>
+    <section
+      class="w-full h-[calc(100vh-4rem)] flex justify-center items-center bg-[url('/main_cover.webp')] bg-cover bg-center bg-no-repeat"
+    >
+      <div
+        class="grid grid-cols-4 auto-rows-max grid-flow-row gap-3 sm:gap-5 backdrop-blur-sm bg-primary-800 bg-opacity-40 p-5 sm:p-10 lg:p-[5rem] text-primary-100 font-bold"
+      >
+        <span class="text-base lg:text-xl">起始</span>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl col-span-4 text-center">源自鶯歌的陶瓷酒瓶</h2>
+        <span class="text-right col-end-5 text-base md:text-xl">EVERCERA</span>
+      </div>
+    </section>
     <section class="w-full h-screen bg-primary-200"></section>
-    <section class="w-full h-screen bg-primary-900"></section>
+    <section class="w-full h-screen bg-primary-900">
+      <div class="w-2/3 mx-auto">
+        <h2 class="font-bold text-5xl">合作案件</h2>
+        <ul>
+          <!-- {
+            cases.map((item) => (
+              <li>
+                {item.title}
+                <img src={item.src} alt={item.title} />
+              </li>
+            ))
+          } -->
+        </ul>
+      </div>
+    </section>
     <section class="w-full h-screen bg-primary-400"></section>
     <section class="w-full h-screen bg-primary-100"></section>
   </main>
