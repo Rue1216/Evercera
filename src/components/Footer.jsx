@@ -57,7 +57,7 @@ export default function App() {
         <div className="flex justify-center items-center">
           <a href="#facebook" className="block text-primary-50">
             <svg
-              class="fill-primary-50 w-8 h-8"
+              className="fill-primary-50 w-8 h-8"
               width="24px"
               height="24px"
               viewBox="0 0 24 24"
@@ -80,7 +80,9 @@ export default function App() {
             </svg>
           </a>
         </div>
-        <p className="copyrights text-center font-bold">&copy;{year} EVERCERA, 兆富股份有限公司</p>
+        <p className="copyrights text-center font-bold">
+          &copy;{year} EVERCERA, 兆富宏業股份有限公司
+        </p>
       </section>
     </footer>
   )

@@ -26,9 +26,9 @@ const { title } = Astro.props
     <ViewTransitions />
   </head>
   <body>
-    <Header client:visible />
+    <Header client:visible transition:persist />
     <slot />
-    <Footer />
+    <Footer transition:persist />
     <style is:global>
       :root {
         --accent: 136, 58, 234;
