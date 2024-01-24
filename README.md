@@ -56,3 +56,21 @@ pnpm prettier --write . --plugin=prettier-plugin-astro
 # install eslint: core/typescript/a11y
 pnpm add -D eslint eslint-plugin-astro @typescript-eslint/parser eslint-plugin-jsx-a11y prettier-plugin-astro
 ```
+
+4. NextUI
+
+```=cmd
+# pnpm compatible
+public-hoist-pattern[]=*@nextui-org/* # in .npmrc file
+pnpm install # check dependencies installed
+
+# install react dependencies
+pnpm add @astrojs/react
+pnpm add react react-dom
+
+# install next-ui
+pnpm add @nextui-org/react framer-motion
+
+# install tailwind
+pnpm astro add tailwind
+```
