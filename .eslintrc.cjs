@@ -1,5 +1,16 @@
 module.exports = {
   extends: ['plugin:astro/recommended', 'plugin:astro/jsx-a11y-recommended', 'prettier'],
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    extends: ['eslint:recommended', 'plugin:react/recommended'],
+    ecmaFeatures: {
+      jsx: true,
+      modules: true,
+      experimentalObjectRestSpread: true
+    },
+    plugins: ['react']
+  },
   overrides: [
     {
       // Define the configuration for `.astro` file.

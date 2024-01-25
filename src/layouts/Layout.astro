@@ -1,6 +1,6 @@
 ---
-import Header from '@components/Header'
-import Footer from '@components/Footer'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 import { ViewTransitions } from 'astro:transitions'
 interface Props {
   title: string
@@ -9,6 +9,14 @@ const { title } = Astro.props
 ---
 
 <!doctype html>
+<script>
+  import { getCurrentGlobalTheme, setGlobalTheme } from '@/helper/globalTheme'
+  setGlobalTheme(getCurrentGlobalTheme())
+  document.addEventListener('astro:after-swap', () => {
+    setGlobalTheme(getCurrentGlobalTheme())
+  })
+</script>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -53,11 +61,5 @@ const { title } = Astro.props
           monospace;
       }
     </style>
-    <script is:inline>
-      const setTheme = () => {
-        localStorage.theme = 'light'
-      }
-      setTheme()
-    </script>
   </body>
 </html>

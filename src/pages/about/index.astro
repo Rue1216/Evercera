@@ -1,7 +1,90 @@
 ---
-import Layout from '../../layouts/Layout.astro'
+import Layout from '@/layouts/Layout.astro'
 ---
 
 <Layout title="關於我們">
-  <main>about page</main>
+  <main>
+    <section class="w-full bg-primary-700 flex justify-center items-center py-[3rem] relative">
+      <div
+        class="hidden sm:block w-1/3 h-full bg-[url('/main/env-2.jpg')] bg-no-repeat bg-center bg-cover absolute top-0 left-0"
+      >
+      </div>
+      <div class="w-5/6 h-full flex flex-col sm:flex-row justify-between items-center">
+        <img
+          class="w-full sm:w-1/3 sm:opacity-0 aspect-auto h-auto mb-5 sm:mb-0"
+          src="/about/family.jpg"
+          alt="family memebers"
+        />
+        <div
+          class="w-full sm:w-2/3 h-full flex flex-col justify-evenly items-center sm:items-start pl-0 sm:pl-5"
+        >
+          <h3
+            class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-primary-100 font-bold pb-3 lg:pb-5"
+          >
+            屹立 50 年的陶瓷王國
+          </h3>
+          <p class="text-primary-200">
+            林文雄從事陶瓷製造 60 多年，雖然高齡77
+            歲，依舊每天在窯廠做陶，他的一生就是一本活的鶯歌陶瓷史。
+            <br />
+            <br />
+            「我 18 歲就開始在金敏窯業工作，一開始是做碗」，1970 年代臺灣經濟起飛，外銷出口大幅成長，林文雄趁勢成立三富，後改名兆富陶瓷，專營各類型陶瓷瓶製作。
+          </p>
+        </div>
+      </div>
+    </section>
+    <section
+      class="w-full bg-primary-200 text-primary-700 flex justify-center items-center pb-[3rem] sm:pb-0 relative"
+    >
+      <div
+        class="hidden sm:block w-1/2 h-full bg-[url('/main/all-jars.jpg')] bg-no-repeat bg-center bg-cover absolute top-0 right-0"
+      >
+      </div>
+      <div
+        class="w-full flex flex-col sm:flex-row-reverse justify-evenly sm:justify-between items-center"
+      >
+        <img
+          class="block w-full sm:w-1/2 sm:opacity-0 aspect-auto h-auto mb-5 sm:mb-0"
+          src="/main/all-jars.jpg"
+          alt="various flagons"
+        />
+        <p class="w-5/6 sm:w-1/2 flex flex-col justify-evenly items-center p-0 sm:p-[3rem]">
+          除了國內各種酒瓶、藥瓶外，也接受各國訂製的特別造型酒瓶。
+          <br />
+          <br />
+          兆富辦公室的櫥窗裡，琳瑯滿目的酒瓶讓人眼花撩亂，除了各種造型外，從1970 年代的總統紀念酒，到近年馬祖酒廠的總統就職紀念酒瓶，都是出自林文雄之手。
+        </p>
+      </div>
+    </section>
+    <section
+      class="w-full bg-primary-500 text-primary-50 flex justify-center items-center py-[3rem] relative"
+    >
+      <div
+        class="hidden sm:block w-1/3 h-full bg-[url('/manufacture/working-7.jpg')] bg-no-repeat bg-center bg-cover absolute top-0 left-0"
+      >
+      </div>
+      <div
+        class="w-full sm:w-5/6 h-full flex flex-col sm:flex-row justify-center items-center pl-0 sm:pl-5"
+      >
+        <img
+          class="w-full sm:w-1/3 sm:opacity-0 aspect-auto h-auto mb-5 sm:mb-0"
+          src="/manufacture/working-7.jpg"
+          alt="person looking carefully at the creramic jars."
+        />
+        <div class="w-5/6 sm:w-2/3 h-full flex flex-col justify-evenly items-center sm:items-start">
+          <h3
+            class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-primary-50 font-bold pb-3 lg:pb-5"
+          >
+            傳承與考驗
+          </h3>
+          <p class="text-primary-100">
+            時代的演變考驗傳統接單模式的陶瓷工廠。
+            <br />
+            <br />
+            面對產業的轉型、訂單的大幅萎縮，新一代經營者嘗試調整工廠經營方向，並積極參與鶯歌陶瓷工藝園區的推動，希望讓兆富陶瓷的酒瓶王國持續發展下去。
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>

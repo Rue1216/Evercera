@@ -10,6 +10,7 @@ export default function Cases() {
         </CardHeader>
         <Image
           removeWrapper
+          isZoomed
           alt="藏嚐久酒-閩東聚落"
           className="z-0 w-full h-full object-cover"
           src="/cases/case3.jpg"
@@ -21,6 +22,7 @@ export default function Cases() {
         </CardHeader>
         <Image
           removeWrapper
+          isZoomed
           alt="馬祖酒廠-頂級高粱酒"
           className="z-0 w-full h-full object-cover"
           src="/cases/case2.jpg"
@@ -32,6 +34,7 @@ export default function Cases() {
         </CardHeader>
         <Image
           removeWrapper
+          isZoomed
           alt="八八坑道"
           className="z-0 w-full h-full object-cover"
           src="/cases/case6.png"
@@ -43,6 +46,7 @@ export default function Cases() {
         </CardHeader>
         <Image
           removeWrapper
+          isZoomed
           alt="金門皇家酒廠"
           className="z-0 w-full h-full scale-125 -translate-y-6 object-cover"
           src="/cases/case7.jpg"
@@ -54,6 +58,7 @@ export default function Cases() {
         </CardHeader>
         <Image
           removeWrapper
+          isZoomed
           alt="飄洋過海"
           className="z-0 w-full h-full object-cover"
           src="/cases/case9.jpg"
