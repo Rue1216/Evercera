@@ -22,7 +22,7 @@ export default function Header() {
         'zh-tw': '關於我們'
       },
       path: '/about'
-    },
+    } /*
     {
       name: 'cases',
       title: {
@@ -46,7 +46,7 @@ export default function Header() {
         'zh-tw': '最新消息'
       },
       path: '/news'
-    }
+    }*/
   ]
 
   function toggleTheme(e) {
