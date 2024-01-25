@@ -8,8 +8,9 @@ import {
   NavbarMenuItem,
   Switch
 } from '@nextui-org/react'
-import { Logo } from '@components/global/Logo'
-import { MoonIcon, SunIcon } from '@components/global/SwitchIcon'
+import { Logo } from '@/components/global/Logo'
+import { MoonIcon, SunIcon } from '@/components/global/SwitchIcon'
+import { toggleGlobalTheme, getCurrentGlobalTheme } from '@/helper/globalTheme'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -49,15 +50,18 @@ export default function Header() {
     }*/
   ]
 
-  function toggleTheme(e) {
-    localStorage.theme = e.target.checked ? 'light' : 'dark'
+  useEffect(() => {
+    const getThemeState = getCurrentGlobalTheme() === 'light' ? true : false
+    if (getThemeState) {
+      setIsSelected(true)
+    } else {
+      setIsSelected(false)
+    }
+  }, [isSelected])
+  function toggleTheme() {
+    toggleGlobalTheme(getCurrentGlobalTheme())
   }
 
-  useEffect(() => {
-    const body = document.querySelector('body')
-    body.className = ''
-    body.classList.add(localStorage.theme)
-  }, [isSelected])
   return (
     <Navbar isBordered isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent justify="start">
